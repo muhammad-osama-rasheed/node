@@ -6,7 +6,6 @@ const corsConfig = {
   Credential: true,
   methods: ["GET, POST, PUT, DELETE"],
 };
-app.options("", cors(corsConfig));
 app.use(cors(corsConfig));
 require("dotenv").config();
 const db = require("./db/db");
