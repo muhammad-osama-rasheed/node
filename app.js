@@ -1,5 +1,13 @@
 const express = require("express");
 const app = express();
+const cors = require("cors");
+const corsConfig = {
+  origin: "*",
+  Credential: true,
+  methods: ["GET, POST, PUT, DELETE"],
+};
+app.options("", cors(corsConfig));
+app.use(cors(corsConfig));
 require("dotenv").config();
 const db = require("./db/db");
 
